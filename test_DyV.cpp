@@ -5,16 +5,44 @@
 using namespace std;
 
 int main(){
-	vector<int> d{9, 8, 7, 6, 5, 4, 3, 2, 1};
-	vector<double> b{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	vector<char> c{'a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'};
-	vector<int> a{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	std::vector<int> a{1, 25, 3};            //Vector de ints vacío
+        std::vector<double> b{1.1, 2.2, 3.3};    //Vector de floats con 10 elementos
+        std::vector<char> c{'a', 'b', 'c'};	 //Vector de shorts con 3 elementos: 1, 2 y 3
+     	std::vector<int>d {75, 25, 3};           //Vector de ints vacío
+        std::vector<double> e{7.1, 2.2, 1.3};    //Vector de floats con 10 elementos
+        std::vector<char> f{'c', 'b', 'a'}; 	 //Vector de shorts con 3 elementos: 1, 2 y 3
+	std:: vector<int> g{9,3, 5,0};
+	
 
-cout << "busqueda int: " << BusquedaBinaria(2, a, 0, 8) << endl;
-cout << "busqueda float: " << BusquedaBinaria(3.3, b, 0, 8) << endl;
-cout << "busqueda char: " << BusquedaBinaria('h', c, 0, 8) << endl;
-cout << "busqueda int inv: "<< BusquedaBinaria_INV(2, d, 0, 8) << endl;
+      	std::cout << "Busqueda Binaria Int: "<<BusquedaBinaria(1, a, 0, 2)<<"\n";
+        std::cout << "Busqueda Binaria Double: "<<BusquedaBinaria(3.3, b, 0, 2)<<"\n";
+        std::cout << "Busqueda Binaria Char: "<<BusquedaBinaria('a', c, 0, 2)<<"\n";
+        std::cout<<"Busqueda BinariaINV Int: "<<BusquedaBinaria_INV(25, d, 0, 2)<<"\n";
+        std::cout<<"Busqueda BinariaINV Double: "<<BusquedaBinaria_INV(7.1, e, 0, 2)<<"\n";
+        std::cout<<"Busqueda BinariaINV Char:"<<BusquedaBinaria_INV('a', f, 0, 2)<<"\n";
+	
+        
+	QuickSort(g, 0, 3);
+	QuickSortINI(a, 0, 2);
+	QuickSortMED(d, 0, 2);
+	
+	for(int i = 0; i < 4; i++){
+		std::cout<<g[i]<<" ";
+	}
+       
+		std::cout<<std::endl;
 
-return 0;
+	for(int i = 0; i < 3; i++){
+		std::cout<<d[i]<<" ";
+	}
+       
+	std::cout<<std::endl;
+	for(int i = 0; i < 3; i++){
+		std::cout<<a[i]<<" ";
+	}
+       
+	
+        return 0;
+
 }
 
